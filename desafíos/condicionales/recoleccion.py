@@ -9,22 +9,21 @@ Debemos hacer un programa que dado el nombre del barrio y la ubicación, nos inf
 
 """
 
-warnMessage = "Has ingresado el nombre o la ubicación de forma incorrecta, vuelva a intentarlo."
 
-print("A continuación indique el nombre del barrio y su ubicación.")
+print("Indique el nombre del barrio y su ubicación.")
 
-neighborhoodName = input("Nombre: ")
-neighborhoodLocation = input("Ubicación: a) Céntrico b) No céntrico. ")
+neighborhood_name = input("Nombre: ")
+neighborhood_location = input("Ubicación:\na) Céntrico\nb) No céntrico.\n>")
 
-neighborhoodLocation = neighborhoodLocation.lower()
+neighborhood_location = neighborhood_location.lower()
 
 
-if neighborhoodLocation != "a" and neighborhoodLocation != "b":
-    print(warnMessage)
+if neighborhood_location != "a" and neighborhood_location != "b":
+    print('Has ingresado el nombre o la ubicación de forma incorrecta, vuelva a intentarlo.')
 
-if neighborhoodName < "m" and neighborhoodLocation == "a":
-    print("El barrio",neighborhoodName,"se encuentra en la sección A")
-elif neighborhoodName > "m" and neighborhoodLocation == "b":
-    print("El barrio",neighborhoodName,"se encuentra en la sección A.")
+if neighborhood_name < "m" and neighborhood_location == "a":
+    print("El barrio",neighborhood_name,"se encuentra en la sección A")
+elif neighborhood_name > "m" and neighborhood_location == "b":
+    print("El barrio",neighborhood_name,"se encuentra en la sección A.")
 else:
-    print("El barrio",neighborhoodName,"se encuentra en la sección B")
+    print("El barrio",neighborhood_name,"se encuentra en la sección B")
