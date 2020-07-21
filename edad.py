@@ -5,14 +5,9 @@ Solicitar la edad de una persona e informar si es mayor de edad o no
 
 """
 
-successMessage = "La persona es mayor de edad."
-warnMessage = "La persona es menor edad."
-
-personAge = int(input("Por favar ingrese la edad de una persona."))
-
+person_age = int(input("Por favar ingrese la edad de una persona."))
 
 if personAge < 18:
-    print(warnMessage)
+    print('La persona es menor de edad')
 else:
-    print(successMessage)
-
+    print('La persona es mayor de edad')
