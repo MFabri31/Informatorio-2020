@@ -3,22 +3,16 @@ Para el uso de fertilizantes es necesario medir cuánto abarca un determinado co
 
 
 """
-welcomeMessage = "Necesitamos que indique un porcentaje del compuesto que utiliza y si la vegetación es de tipo matorral."
-successMessage = "Es factible la utilización de fertilizantes."
-warnMessage = "No es posible la utilización de fertilizantes."
-errorMessage = "Has introducido un valor incorrecto por favor vuelva a intentarlo."
-
-
-print(welcomeMessage)
 
 compound = int(input("Porcentaje del compuesto: "))
-typeOfVegetation = input("a) Vegetación normal b) Vegetación de tipo matorral.") 
+type_of_vegetation = input("a) Vegetación normal\nb) Vegetación de tipo matorral.\n>")
 
-if compound >= 10 and typeOfVegetation == "a":
-    print(successMessage)
-elif compound >= 10 and typeOfVegetation == "b":
-    print(warnMessage)
-elif compound <= 10 and typeOfVegetation == "a" or typeOfVegetation == "b":
-    print(warnMessage)
+
+if compound >= 10 and type_of_vegetation == "a":
+    print('Es factible la utilización de fertilizantes.')
+elif compound >= 10 and type_of_vegetation == "b":
+    print('No es posible la utilización de fertilizantes.')
+elif compound <= 10 and type_of_vegetation == "a" or type_of_vegetation == "b":
+    print('No es posible la utilización de fertilizantes.')
 else:
-    print(errorMessage)
+    print('Valor incorrecto. Vuelva a intentarlo.')
