@@ -6,18 +6,16 @@ Escribir un programa que pregunte al usuario su nombre y turno, y muestre por pa
 
 """
 
-welcomeMessage = "A continuación ingrese su nombre y el turno al que asiste para conocer a que grupo pertenece."
-print(welcomeMessage)
 
-studentName = input("Nombre: ")
-studentTurn = input("Turno: ")
+print('A continuación ingrese su nombre y el turno al que asiste para conocer a que grupo pertenece.')
 
-studentName = studentName.lower()
-studentTurn = studentTurn.lower()
+student_name = input("Nombre: ").capitalize()
+student_turn = input("Turno: ").capitalize()
 
-if studentName < "m" and studentTurn == "tarde":
+
+if student_name < "m" and student_turn == "tarde":
     print("Usted pertenece al grupo A.")
-elif studentName > "n" and studentTurn == "noche":
+elif student_name > "n" and student_turn == "noche":
     print("Usted pertenece al grupo A.")
 else:
     print("Usted pertenece al grupo B.")
