@@ -5,13 +5,13 @@ Desarrollar un programa que solicite que te ingresen las ventas de 2 días. Y lu
 """
 
 
-day1 = int(input("Ingrese el total de ventas del día 1: "))
-day2 = int(input("Ingrese el total de ventas del día 2: "))
+day_1 = int(input("Ingrese el total de ventas del día 1:\n> "))
+day_2 = int(input("Ingrese el total de ventas del día 2:\n> "))
 
 
-if day1 == day2:
+if day_1 == day_2:
     print("Las ventas fueron iguales en ambos días.")
-elif day1 > day2:
+elif day_1 > day_2:
     print("Las ventas del día 1 fueron mayores a las del día 2.")
-elif day2 > day1:
+elif day_2 > day_1:
     print("Las ventas del día 2 fueron mayores a las del día 1.")
