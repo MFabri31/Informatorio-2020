@@ -9,12 +9,16 @@ Escribir un programa que pregunte al usuario que tipo de receta desea, y en func
 
 """
 
+
+
+
+
 print("Elija el tipo de receta ecológica que desea.")
 
 ingredients1 = ["lentejas","apio"]
 ingredients2 = ["morrón","cebolla"]
 
-question = input("a) Receta 1 b) Receta 2.")
+question = input("\na) Receta 1\nb) Receta 2.\n>")
 question = question.lower()
 
 
@@ -23,7 +27,7 @@ if question != "a" and question != "b":
          
 
 if question == "a":
-    ingredients = input("Por favor indique los ingredientes. a) Verduras b) Berenjenas.")
+    ingredients = input("Por favor indique los ingredientes.\na) Verduras\n b) Berenjenas.\n>")
 
     if ingredients == "a":
         print("Usted a elejido la receta 1 con las siguientes ingredientes.")
@@ -39,7 +43,7 @@ if question == "a":
          
 
 if question == "b":
-    ingredients = input("Por favor indique los ingredientes. a) Verduras b) Berenjenas.")
+    ingredients = input("Por favor indique los ingredientes.\na) Verduras\nb) Berenjenas.\n>")
 
     if ingredients == "a":
         print("Usted a elejido la receta 2 con las siguientes ingredientes.")
@@ -52,5 +56,3 @@ if question == "b":
         for i in ingredients2:
             print(i)
         print("berenjenas")
-
-    
