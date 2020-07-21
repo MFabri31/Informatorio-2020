@@ -10,9 +10,9 @@ Solicita cantidad total de preguntas y luego cantidad de respuestas correctas
 
 """
 
-questions = int(input("Ingrese el todal de preguntas realizadas: "))
-correctAnswers = int(input("Indique la cantidad de preguntas correctas: "))
-percentage = (correctAnswers * 100) / questions
+question = int(input("Ingrese el todal de preguntas realizadas: "))
+correct_answers = int(input("Indique la cantidad de preguntas correctas: "))
+percentage = (correct_answers * 100) / question
 
 
 if percentage >= 90:
