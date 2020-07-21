@@ -8,28 +8,21 @@ Para seguir colaborando en esta misión de salvar al planeta, necesitamos que el
 
 """
 
-welcomeMessage = "A continuación necesitamos que nos indique el tamaño del pez para saber si está contaminado o no."
-warnMessage = "Has ingresado un valor inválido. Por favor vuelva a intentarlo."
+print('Necesitamos que nos indique el tamaño del pez para saber si está contaminado o no.')
 
+fish_size = (input("Tamaño del pez:\na) Normal\nb) Por debajo del normal\nc) Un poco por encima de lo normal\nD) Pez contaminado.\n>"))
+fish_size = fish_size.lower()
 
-
-print(welcomeMessage)
-
-fishSize = (input("Tamaño del pez: a) Normal b) Por debajo del normal c) Un poco por encima de lo normal D) Pez contaminado."))
-fishSize = fishSize.lower()
-
-if fishSize == "a":
+if fish_size == "a":
     print("Pez en buenas condiciones.")
-elif fishSize == "b":
+elif fish_size == "b":
     print("Pez con problemas de nutrición.")
-elif fishSize == "c":
+elif fish_size == "c":
     print("Pez con síntomas de organismo contaminado.")
-elif fishSize == "d":
+elif fish_size == "d":
     print("Pez contaminado.")
 else:
-    print(warnMessage)
-
-
+    print('Has ingresado un valor inválido. Por favor vuelva a intentarlo.')
 
 
 
