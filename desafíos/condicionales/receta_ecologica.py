@@ -11,8 +11,6 @@ Escribir un programa que pregunte al usuario que tipo de receta desea, y en func
 
 
 
-
-
 print("Elija el tipo de receta ecológica que desea.")
 
 ingredients1 = ["lentejas","apio"]
