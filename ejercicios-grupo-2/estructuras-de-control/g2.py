@@ -125,13 +125,10 @@ print("Resultado de la potencia:",operation)
 
 from random import randint
 
-succesMessage = "Respuesta correcta."
-warnMessage = "Respuesta incorrecta."
+question = int(input("¿Cuantas multiplicaciones desea a realizar?\n>"))
 
-question = int(input("¿Cuantas multiplicaciones desea a realizar?"))
-
-correctAnswers = 0
-wrongAnswer = 0
+correct_answers = 0
+wrong_answers = 0
 count = 0
 
 while count < question:
@@ -140,16 +137,16 @@ while count < question:
  
   multiplication = number1 * number2
 
-  question2 = int(input(f"¿Cuanto es {number1} * {number2}?"))
+  question2 = int(input(f"¿Cuanto es {number1} * {number2}?\n>"))
 
   if question2 == multiplication:
-    print(succesMessage)
-    correctAnswers+= 1
+    print('Respuesta correcta.')
+    correct_answers+= 1
   else:
-    print(warnMessage)
-    incorrect = wrongAnswer + 1
+    print('Respuesta incorrecta.')
+    wrong_answers += 1
   count += 1
 
-
-print(f"Total de preguntas correctas:  {correctAnswers}")
-print(f"Total de preguntas incorrectas: {wrongAnswer}")
+print('-------------')
+print(f"Respuestas correctas:  {correct_answers}")
+print(f"Respuestas incorrectas: {wrong_answers}")
