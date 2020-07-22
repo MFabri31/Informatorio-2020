@@ -12,23 +12,23 @@ Crea una tupla con números, pide un numero por teclado e indica cuantas veces s
 
 from random import randint
 
-listOfNumbers = []
+list_of_numbers = []
 
 for value in range(1,11):
     number = randint(1,20)
-    listOfNumbers.append(number)
+    list_of_numbers.append(number)
 
-numbers = tuple(listOfNumbers)
+numbers = tuple(list_of_numbers)
 
 print(f'Tupla: {numbers}')
 
-num = int(input("Ingrese un numero: "))
+number = int(input("Ingrese un numero: "))
 
-if num not in numbers:
-    print(f'El número ingresado {num} no se encuentra en la tupla.')
+if number not in numbers:
+    print(f'El número ingresado {number} no se encuentra en la tupla.')
 else:
-    total = numbers.count(num)
-    print(f'El número ingresado {num} se repite {total} veces.')
+    total = numbers.count(number)
+    print(f'El número ingresado {number} se repite {total} veces.')
 
 
 # Solución 2
@@ -85,7 +85,7 @@ Terminar el programa.
 # Coloque la resolución del Ejercicio debajo de esta línea
 
 clients = {}
-dataClient = {}
+data_client = {}
 
 
 while True:
@@ -96,7 +96,7 @@ while True:
         nif = int(input('Ingrese su NIF: '))
         name = input('Ingrese su nombre: ').capitalize()
         address = input('Indique su direccion: ').capitalize()
-        numberPhone = input('Indique su n° de telefono: ')
+        number_phone = input('Indique su n° de telefono: ')
         email = input('Ingrese su correo: ').lower()
         preferential = input('Indique si es cliente preferente [S/N]: ').lower()
         
@@ -105,37 +105,37 @@ while True:
         elif preferential == 'n':
             preferential = False
         
-        dataClient = {
+        data_client = {
             'Nombre': name,
             'Direccion':address,
-            'Telefono': numberPhone,
+            'Telefono': number_phone,
             'Correo':email,
             'Preferente': preferential
         }
 
-        clients[nif] = dataClient
+        clients[nif] = data_client
     
     elif option == 2:
-        removeClient = int(input('Indique el NIF del cliente que desea eliminar:\n>')) 
+        remove_client = int(input('Indique el NIF del cliente que desea eliminar:\n>')) 
 
-        while removeClient not in clients:
+        while remove_client not in clients:
             print('El n° de nif que ha ingresado no se encontrado. Intente nuevamente.')
-            removeClient = int(input('Indique el NIF del cliente que desea eliminar: ')) 
+            remove_client = int(input('Indique el NIF del cliente que desea eliminar: ')) 
         
-        if removeClient in clients:
-            del clients[removeClient]
+        if remove_client in clients:
+            del clients[remove_client]
 
     elif option == 3:
-        showClient = int(input('Indique el NIF del cliente que desea mostrar: '))
+        show_client = int(input('Indique el NIF del cliente que desea mostrar: '))
         
-        while showClient not in clients:
+        while show_client not in clients:
             print('El n° de nif que ha ingresado no se ha encontrado. Intente nuevamente.')
-            showClient = int(input('Indique el NIF del cliente que desea mostrar: '))
+            show_client = int(input('Indique el NIF del cliente que desea mostrar: '))
         
-        if showClient in clients:
-            print(f'Clinte: {clients[showClient]}')
-          
-        
+        if show_client in clients:
+            print(f'Clinte: {clients[show_client]}')
+            
+            
     elif option == 4:
         print(f"Clientes:\n{clients} ")
         
@@ -144,7 +144,6 @@ while True:
             if value['Preferente']:
                 print('Clientes Preferentes: ')
                 print(f'NIF:{key} - Cliente: {value["Nombre"]}')
-           
-    
+                                          
     elif option == 6:
         break
