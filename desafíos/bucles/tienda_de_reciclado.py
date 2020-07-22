@@ -9,13 +9,13 @@ Se sabe que si el código de descuento es rojo se obtendrá un 40% de descuento;
 
 while True:
     try:
-        totalToPay = int(input("Importe a pagar: \n>"))
+        total_to_pay = int(input("Importe a pagar: \n>"))
     except ValueError:
         print('Debe ingresar un valor numérico.')
     else:
         break
 
-    
+
 while True:
 
 
@@ -30,17 +30,15 @@ while True:
     
     if discount == "r":
         print("Descuento obtenido: 40%")
-        totalToPay = round(totalToPay - (40 * totalToPay) / 100)
+        total_to_pay = round(total_to_pay - (40 * total_to_pay) / 100)
     elif discount == "a":
         print("Descuento obtenido: 25%")
-        totalToPay = round(totalToPay - (25 * totalToPay) / 100)
+        total_to_pay = round(total_to_pay - (25 * total_to_pay) / 100)
     elif discount == "b":
         print("No tiene ningun tipo de descuento.")
-    
+            
     break
 
 
-print(f'Importe total a pagar: ${totalToPay}')
-
-
+print(f'Importe total a pagar: ${total_to_pay}')
     
