@@ -5,15 +5,12 @@ Crea una tupla con los factores que más afectan a los mares. Luego para jugar c
 
 factors = (' ','Aguas residuales','Sustancias químicas','plásticos','Cambio climático')
 
-flag = True 
+while True:
+    number = int(input("Digíte un n°: "))
 
-while flag:
-    num = int(input("Digíte un n°: "))
-
-    if num > 4:
+    if number > 4:
         print('Contenido no disponible')
-    elif num == 0:
-        flag = False
+    elif number == 0:
+        break
     else:
-        print(factors[num])
-
+        print(factors[number])
