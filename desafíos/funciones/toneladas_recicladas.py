@@ -7,32 +7,35 @@ Realiza una función llamada relacion(a, b) que a partir de toneladas recicladas
 """
 
 
-cityName1 = input('Nombre de ciudad 1:\n>').capitalize()
-cityName2 = input('Nombre de ciudad 2:\n>').capitalize()
+city_name1 = input('Nombre de ciudad 1:\n>').capitalize()
+city_name2 = input('Nombre de ciudad 2:\n>').capitalize()
 
 tons = []
+
 
 for value in range(1,3):
     while True:
         try:
-            tonsOfCity = int(input(f'Toneladas recicladas en ciudad {value}: \n>'))
-            tons.append(tonsOfCity)
+            tons_of_city = int(input(f'Toneladas recicladas en ciudad {value}: \n>'))
+            tons.append(tons_of_city)
         except ValueError:
             print('Solo se admiten valores numéricos!')
         else:
             break
 
-tonsOfCity1 = tons[0]
-tonsOfCity2 = tons[1]
+
+tons_of_city1 = tons[0]
+tons_of_city2 = tons[1]
 
 
 def relation(a,b):
     if a > b:
-        print(f'Ciudad 1: {cityName1}')
+        print(f'Ciudad 1: {city_name1}')
     elif b > a:
-        print(f'Ciudad 2: {cityName2}')
+        print(f'Ciudad 2: {city_name2}')
     elif  a == b:
         print('--------')
-        print(f'Ciudades:\n1.{cityName1}\n2.{cityName2}')
+        print(f'Ciudades:\n1.{city_name1}\n2.{city_name2}')
 
-relation(tonsOfCity1,tonsOfCity2)
+        
+relation(tons_of_city1,tons_of_city2)
