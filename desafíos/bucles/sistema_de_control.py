@@ -17,13 +17,17 @@ Del valor numérico:
 Deberás informar total de vehículos observados, total de vehículos que han tirado basura y porcentaje de éstos que ya habían sido multados.
 
 """
+
+
 total = []
+
 
 while True:
     print("Sistema de monitoreo de patente")
     print("----Opciones----\n")
     option = input('a) Ingresar patente\nb) Terminar \n>')
-
+    
+    
     if option == 'a':
         print('ingresar')
         number = input("N° de patente: >  ")
@@ -41,33 +45,26 @@ while True:
 
     elif option == 'b':
         break
-
+            
     print(' ')
-
+    
 print('-----------')
 print('Informe')
 print(f'Total de vehículos observados: {len(total)}')
 
-totalGarbage = 0
-carsFined = 0
+total_garbage = 0
+cars_fined = 0
 
-for licensePlate in total:
-    if licensePlate[3] == "1":
-        totalGarbage += 1
-    if licensePlate[4] == "1":
-        carsFined += 1
+for license_plate in total:
+    if license_plate[3] == "1":
+        total_garbage += 1
+    if license_plate[4] == "1":
+        cars_fined += 1
         
-
-total = len(licensePlate)
-parcentage = float(carsFined / total*100)
-
-print(f'Total de vehículos que han tirado basura: {totalGarbage}')
-print(f'Porcentaje de vehículos ya multados: {carsFined}%')
+        
+total = len(license_plate)
+parcentage = float(cars_fined / total*100)
 
 
-
-
-
-
-
-
+print(f'Total de vehículos que han tirado basura: {total_garbage}')
+print(f'Porcentaje de vehículos ya multados: {cars_fined}%')
