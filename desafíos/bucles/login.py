@@ -6,21 +6,21 @@ b) Modificar el programa anterior para que solamente permita una cantidad fija d
 
 """
 
-userPass = "1234"
+user_pass = "1234"
 count = 1
 
 
-loginPass = input("Ingrese su contraseña.")
+login_pass = input("Ingrese su contraseña.\n>")
 
-if loginPass == userPass:
-    print('')
-elif loginPass != userPass:
+if login_pass == user_pass:
+    print('Ha iniciado sesión correctamente')
+elif login_pass != user_pass:
 
     while count < 5:
         print('Las contraseña no coinciden, por favor vuelva intentarlo.')
-        loginPass = input("Ingrese su contraseña.")
+        login_pass = input("Ingrese su contraseña.")
         
-        if userPass == loginPass:
+        if user_pass == login_pass:
             print('Has iniciado sesion correctamente.')
     
             break
