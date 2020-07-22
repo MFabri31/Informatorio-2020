@@ -28,33 +28,29 @@ debe mostrar por pantalla las asignaturas que el usuario no aprobo y tiene que v
 '''
 # Coloque la resolución del Ejercicio debajo de esta línea
 
-message = "Nombre de la asignatura"
-message2 = "Nota de la asignatura"
-warnMessage = "Materias que debes volver a cursar: "
-
 subjects = []
-approvedSubjects = []
-totalSubjects = 5
+approved_subjects = []
+total_subjects = 5
 
 count = 1
 
-while count < totalSubjects:
-    subjectName = input(f"{message} {count}: ").capitalize()
-    subjects.append(subjectName)
+while count < total_subjects:
+    subject_name = input(f"Nombre de la asignatura {count}: ").capitalize()
+    subjects.append(subject_name)
 
     count += 1
 
 
 for value in subjects:
-    score = int(input(f"{message2} {value}:"))
+    score = int(input(f"Nota de la asignatura {value}:"))
     if score > 5:
-        approvedSubjects.append(value)
+        approved_subjects.append(value)
 
-for value in approvedSubjects:
+for value in approved_subjects:
     subjects.remove(value)
 
 
-print(warnMessage)
+print('Materias que debes volver a cursar:')
 
 for value in subjects:
     print(value)
